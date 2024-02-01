@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-// import { useAuthContext } from "@/context/AuthContext";
+import { useAuthContext } from "@/context/AuthContext";
 import Link from "next/link";
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
@@ -10,7 +10,7 @@ function classNames(...classes) {
 }
 
 const Navbar = () => {
-//   const { currentUser } = useAuthContext();
+  const { currentUser } = useAuthContext();
   const [showBackground, setShowBackground] = useState(false);
 
   useEffect(() => {
@@ -29,8 +29,6 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  const currentUser = { displayName: "Furkan Doğu" };
 
   return (
     <>
