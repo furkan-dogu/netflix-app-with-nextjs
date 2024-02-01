@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+html {
+  @apply h-full;
+}
+body {
+  @apply bg-zinc-900 h-full;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus input:-webkit-autofill {
+  -webkit-text-fill-color: white !important;
+  -webkit-box-shadow: 0 0 0px 0px #28292d inset !important;
+  transition: background-color 5000s ease-in-out 0s !important;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: #ec4949;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #000;
+  border: 3px solid transparent;
+  border-radius: 5px;
+  background-clip: content-box;
+}
