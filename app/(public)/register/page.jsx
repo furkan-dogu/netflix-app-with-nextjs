@@ -72,12 +72,11 @@ const Register = () => {
                 Register
               </button>
               <button
-                className="flex justify-between text-center items-center btn-danger"
+                className="flex justify-center text-center gap-1 items-center btn-danger"
                 type="button"
               >
-                <span className="2xl:hidden sm:w-[30px]"></span>
-                Continue with Google
                 <GoogleIcon color="currentColor" />
+                Continue with Google
               </button>
             </form>
           </div>
