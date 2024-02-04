@@ -8,9 +8,10 @@ const MovieDetail = async ({ params: { movieId } }) => {
   const videoKey = await getVideoKey(movieId);
 
   return (
-    <div className="md:container px-10 mx-auto py-5">
-      <h1 className="text-white text-center text-3xl">{movieDetails?.title}</h1>
+    <div className="md:container px-10 mx-auto py-5 mt-12">
+      <h1 className="text-white text-center text-3xl mb-4">{movieDetails?.title}</h1>
       {videoKey && <VideoSection videoKey={videoKey} />}
+      <p className="text-white text-justify text-xl mt-4">{movieDetails?.overview}</p>
       <div className="flex items-center mt-3 md:mt-4 gap-3">
         <Link
           href={"/movies"}
