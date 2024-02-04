@@ -13,7 +13,6 @@ const Profile = () => {
         <h1 className='text-3xl md:text-6xl text-white text-center'>Who's watching?</h1>
         <ProfileContainer />
       </div>
-
     </div>
   )
 }

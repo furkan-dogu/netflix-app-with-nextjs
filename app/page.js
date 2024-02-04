@@ -13,7 +13,7 @@ export default function Home() {
           <p className="text-2xl font-[400]">Watch anywhere. Cancel anytime.</p>
           <button
             className="btn-danger w-[250px]"
-            onClick={() => router.push("/register")}
+            onClick={() => router.push("/login")}
           >
             Get Started
           </button>
