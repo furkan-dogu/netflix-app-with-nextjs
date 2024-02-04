@@ -44,7 +44,7 @@ input:-webkit-autofill:focus input:-webkit-autofill {
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
-  background-color: #ec4949;
+  background-color: #D51820;
 }
 ::-webkit-scrollbar-thumb {
   background-color: #000;

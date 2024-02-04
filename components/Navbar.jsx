@@ -10,7 +10,7 @@ function classNames(...classes) {
 }
 
 const Navbar = () => {
-  const { currentUser } = useAuthContext();
+  const { currentUser, logOut } = useAuthContext();
   const [showBackground, setShowBackground] = useState(false);
 
   useEffect(() => {
@@ -87,19 +87,6 @@ const Navbar = () => {
                     <Menu.Item>
                       {({ active }) => (
                         <Link
-                          href="/login"
-                          className={classNames(
-                            active ? "bg-gray-100" : "",
-                            "block px-4 py-2 text-sm text-gray-700"
-                          )}
-                        >
-                          Login
-                        </Link>
-                      )}
-                    </Menu.Item>
-                    <Menu.Item>
-                      {({ active }) => (
-                        <Link
                           href="/profile"
                           className={classNames(
                             active ? "bg-gray-100" : "",
@@ -110,20 +97,36 @@ const Navbar = () => {
                         </Link>
                       )}
                     </Menu.Item>
-                    <Menu.Item>
-                      {({ active }) => (
-                        <span
-                          className={classNames(
-                            active ? "bg-gray-100" : "",
-                            "block px-4 py-2 text-sm text-gray-700 cursor-pointer"
-                          )}
-                          role="button"
-                          onClick={() => logOut()}
-                        >
-                          Log out
-                        </span>
-                      )}
-                    </Menu.Item>
+                    {currentUser ? (
+                      <Menu.Item>
+                        {({ active }) => (
+                          <span
+                            className={classNames(
+                              active ? "bg-gray-100" : "",
+                              "block px-4 py-2 text-sm text-gray-700 cursor-pointer"
+                            )}
+                            role="button"
+                            onClick={logOut}
+                          >
+                            Logout
+                          </span>
+                        )}
+                      </Menu.Item>
+                    ) : (
+                      <Menu.Item>
+                        {({ active }) => (
+                          <Link
+                            href="/login"
+                            className={classNames(
+                              active ? "bg-gray-100" : "",
+                              "block px-4 py-2 text-sm text-gray-700"
+                            )}
+                          >
+                            Login
+                          </Link>
+                        )}
+                      </Menu.Item>
+                    )}
                   </Menu.Items>
                 </Transition>
               </Menu>
