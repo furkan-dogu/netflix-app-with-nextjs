@@ -2,6 +2,7 @@
 
 import { useAuthContext } from "@/context/AuthContext";
 import GoogleIcon from "@/public/icons/GoogleIcon";
+import Link from "next/link";
 import { useState } from "react";
 
 const Register = () => {
@@ -76,6 +77,15 @@ const Register = () => {
                   onChange={handleChange}
                 />
                 <label htmlFor="password">Password</label>
+              </div>
+              <div className="flex justify-center items-center gap-2">
+                <p className="text-white text-[11px] sm:text-base">Already have an account?</p>
+                <Link
+                  className="text-[#ff4b45] text-[11px] sm:text-base py-3 font-[0.75em] cursor-pointer hover:text-gray-500"
+                  href="/login"
+                >
+                  Sign In
+                </Link>
               </div>
               <button className="btn-danger" type="submit">
                 Register
